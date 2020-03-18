@@ -9,6 +9,8 @@ public class LuckyRegistrationNumber {
     public static int checkRegistrationNumber(String regNumber) {
     	String regex = "(KA|DL)(0[1-9]|10)[A-Z]{1,2}[1-9][0-9]{3}";
     	int output = -1;
+    	if(regNumber==null)
+    		return output;
     	if (regNumber.matches(regex))
     		output = 0;
     	if (output == 0) {
